@@ -1,5 +1,6 @@
 # GEOALARMAS
 Mapa hecho en Leaflet y PHP, visualiza puntos de alarmas, obteniendo latitud y longitud de una base de datos Sql Server.
+bainileonardo@gmail.com
 
 DIAGRAMA BÁSICO DE FUNCIONAMIENTO Y PANTALLAS
 ![image](https://user-images.githubusercontent.com/11530132/181313125-d929a9a0-fc06-4875-93bf-4d098014f119.png)
