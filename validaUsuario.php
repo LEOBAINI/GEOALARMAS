@@ -1,5 +1,6 @@
 <?php 
- set_time_limit(13000);
+ session_set_cookie_params(60*60*24*14);//haciendo que la sesion dure 14 dias
+
 session_start();
 
 // si no existe usuario, salir
