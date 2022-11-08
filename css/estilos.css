@@ -74,5 +74,128 @@ z-index:2000;
    position: absolute;
    right: 25px;
 }
-  
+	
+#informativa2{
+	display:flex;
+	
+}
+/*Menu hamburguesa*/
+*{
+   font-family: Arial;
+ }
+ 
+ ul{
+   display: none;
+ }
+ 
+ input:checked  ~ ul{
+   display:block;
+ }
+ 
+ 
+ 
+ label {
+   box-sizing: border-box;
+   display: inline-block;
+   border: 1px solid black;
+   border-radius: 5px;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   font-weight: bold;
+   text-align: center;
+   user-select: none;
+ }
+ 
+ /* Estilo del boton cuando se pasa el mouse por encima*/
+ label:hover{
+   background: grey;
+ }
+ 
+ /* Estilo del boton cuando el menú está expandido*/
+ input:checked ~ label {
+   background: #ffd203; 
+ }
+ 
+ ul{
+   margin-top:0;
+   padding: 0;
+   width: 200px;
+   
+ 
+ }
+ 
+ 
+ li {
+   display: block;
+   background: #ffd203;
+   margin: 0;
+   padding: 10px;
+   list-style: none;
+   border-bottom: 1px solid grey;
+ }
+ 
+ /*Estilo cuando el mouse pasa encima de cada link del menu*/
+ li:hover {
+   filter: brightness(110%);
+ }
+ #menuHamburguesa{
+   position: absolute;
+   z-index: 3000;
+   left: 8px;
+   top: 90px;
+   height: 40px;
+   width: 40px;
+   
+ }
+ #menu{
+   display:none;
+ }
+ #muestracontratos{
+   width: 200px;
+   height: 95%;
+   background-color: white;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   overflow-y: scroll;
+   border: 2px solid black;
+ }
+ #formulario{
+   width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    position: relative;
+    left: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+ h3{
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+}
+ 
+ #container{
+   
+   width: 100%;
+   height: 100%;
+   background-color:#ffd203;
+   
 
+ }
+ #botones{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column-reverse;
+   align-content: stretch;
+   justify-content: space-evenly;
+   align-items: stretch;
+ }
+ #entradaTexto{
+   width: 100%;
+   height: auto;
+ }
