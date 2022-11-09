@@ -1,7 +1,7 @@
 <?php
 
 include "funcionesEspeciales.php";
-include "settings.php";
+include_once "settings.php";
 
 
 

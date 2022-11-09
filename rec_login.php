@@ -8,6 +8,8 @@ $passwordFromDB=settings::password;
 
 
 if ($username==$usernameFromDB && $password==$passwordFromDB) {
+	session_set_cookie_params(60*60*24*14);//haciendo que la sesion dure 14 dias
+    
 	session_start();
 	$_SESSION["usuario"]=$username;
 	header("Location: index.php");

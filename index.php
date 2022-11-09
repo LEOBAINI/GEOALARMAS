@@ -4,6 +4,7 @@
 	include "sqlServer.php";
 	include 'funcionesEspeciales.php';
 	require_once "validaUsuario.php";
+	
 	$ficheroCacheHistorico=settings::ficheroCacheHistorico;
 	$ficheroCacheRealTime=settings::ficheroCacheRealTime;
 	
@@ -19,6 +20,10 @@
 	 <link rel="stylesheet"  type = "text/css" href="js/leaflet.css">
 	 <link rel="stylesheet"  type = "text/css" href="css/estilos.css">
 	 <script src="js/leaflet.js"></script>	
+	 <script src="js/leafletMarkerCluster.js"></script>	
+ 
+	 
+	 
 	 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	 <link rel="icon" href="prosegur.png">  
 	 <title>GEOALARMAS 2.0</title>
@@ -28,7 +33,9 @@
 <body>
 
 <div id="map" >
-<div id="canarias"></div>
+
+
+<!--<div id="canarias"></div> HABILITAR ESTE COMENTARIO PARA ESPAÑA-->
 
 <script>
 
@@ -36,7 +43,7 @@
 		<?php
 		 echo settings::getLatLongitudInicial(); //-34.567200,-58.562193
 		 ?>
-		], 6.3);
+		], 7.3);
 	
 	var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 18,
@@ -49,9 +56,9 @@
 	var marker2;
 	bounds = L.latLngBounds();
 	var iconoAlarmaTiempoReal = new L.Icon({
-  	iconUrl: 'police-siren-siren.gif',//police-siren-siren.gif',
-  	iconSize: [20, 20],
-  	iconAnchor: [20, 20]
+  	iconUrl: '<?php echo settings::iconoAlarma?>',
+  	iconSize: [30, 30],
+  	iconAnchor: [30, 30]
 }); 
 
 	var iconoDeMoto = new L.Icon({
@@ -77,6 +84,7 @@
 	recargarFicheroRealTimeAsync();
 	
 	
+	
 }
 
 	
@@ -93,6 +101,10 @@
 		settings::tamanioCirculoHistorico1
 	);
 }
+	if(settings::mapaAjustarApuntos==true){
+	echo "map.fitBounds(bounds)";
+	}
+
 	?>
 	
 	
@@ -107,11 +119,22 @@
 
 </script>
 </div>
+<nav id="menuHamburguesa">
+  <input type="checkbox" id="menu">
+  <label for="menu"> ☰ </label>
+  <ul>
+    <li><a href="filtroContrato.php">Filtrar Contratos</a></li>
+  
+  </ul>
+</nav>
+
 <div id="info">
 <?php
 mostrarEtiquetaInformativa($arrayAsociativoAlarmasTiempoReal,$motos,$arrayAsociativoAlarmasHistorico);
 ?>
-<div id="info2"></div>
+<div id="info2">
+
+</div>
 <img id="logo" src = 'prosegur.png' />
 
 </div>
@@ -124,7 +147,7 @@ $(document).ready(function() {
     $('#info2').load('info.php');//actualizas el div
    }, 1000 );
 });
-$(document).ready(
+/*$(document).ready(
 	function(){
 	$('#canarias').load('index_canarias.php');	
 	ocultarMiniMapaSiCorresponde();
@@ -132,17 +155,17 @@ $(document).ready(
 	}
 	);  
 	$('.leaflet-control-attribution').hide();
+	*/
 
 
- let mapa = document.getElementById('map');
- let canar = document.getElementById('canarias');
+ //let canar = document.getElementById('canarias');
 
- canar.addEventListener('click',
+ /*canar.addEventListener('click',
  function(){
 	 map.flyTo([28.417209, -16.161493], 8);
 	 ocultarMiniMapaSiCorresponde();
  }
- );		 
+ );		
  mapa.addEventListener('wheel',
  function(){
 	ocultarMiniMapaSiCorresponde();
@@ -163,7 +186,7 @@ $(document).ready(
 	canar.style.visibility = "hidden";
 	
 	 }
- }
+ }*/ 
 
 
 </script>
