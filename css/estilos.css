@@ -1,201 +1,212 @@
 
    * {
-  margin: 0; padding: 0;
-}
+    margin: 0; padding: 0;
+  }
+    
   
-
-html,body{
-
-height: 100%;
-width: 100%;
-
-
-}
-
-
-#map{
-    width: 100%;
-    height: 97%;
-     }
-	 /*contenedor del mapa*/
-#mapCanarias{
-width: 300px; 
-height: 200px;
-border-width:1px;
-border-color:red;
-border-style:ridge;
-z-index:2000;
-
- 
-
-     }
-#canarias{
-	
-	
-	position: absolute;
-	left:800px;
-	bottom: 50px;
-	width: 300px;
-	height: 200px;	
-	
-	
+  html,body{
   
-	
-}
-
- #info{
-    height: 3%;
-    width: 100%;
-    background-color: #ffd203;
-    font-style: italic;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: small;
+  height: 100%;
+  width: 100%;
+  
+  
+  }
+  
+  
+  #map{
+      width: 100%;
+      height: 97%;
+       }
+     /*contenedor del mapa*/
+  #mapCanarias{
+  width: 300px; 
+  height: 200px;
+  border-width:1px;
+  border-color:red;
+  border-style:ridge;
+  z-index:2000;
+  
    
- }    
- #logo{
-    height: 20px;
-    width: 20px;
- }
-
- :root {
-    --map-tiles-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
-}
-
-@media (prefers-color-scheme: dark) {
-    .map-tiles {
-        filter:var(--map-tiles-filter, none);
+  
+       }
+  #canarias{
+    
+    
+    position: absolute;
+    left:800px;
+    bottom: 50px;
+    width: 300px;
+    height: 200px;	
+    
+    
+    
+    
+  }
+  
+   #info{
+      height: 3%;
+      width: 100%;
+      background-color: #ffd203;
+      font-style: italic;
+      font-weight: bolder;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: small;
+     
+   }    
+   #logo{
+      height: 20px;
+      width: 20px;
    }
-}
-#salir{
-   color: black;
-   position: absolute;
-   right: 25px;
-}
-	
-#informativa2{
-	display:flex;
-	
-}
-/*Menu hamburguesa*/
-*{
-   font-family: Arial;
- }
- 
- ul{
-   display: none;
- }
- 
- input:checked  ~ ul{
-   display:block;
- }
- 
- 
- 
- label {
-   box-sizing: border-box;
-   display: inline-block;
-   border: 1px solid black;
-   border-radius: 5px;
-   width: 30px;
-   height: 30px;
-   line-height: 30px;
-   font-weight: bold;
-   text-align: center;
-   user-select: none;
- }
- 
- /* Estilo del boton cuando se pasa el mouse por encima*/
- label:hover{
-   background: grey;
- }
- 
- /* Estilo del boton cuando el menú está expandido*/
- input:checked ~ label {
-   background: #ffd203; 
- }
- 
- ul{
-   margin-top:0;
-   padding: 0;
-   width: 200px;
+  
+   :root {
+      --map-tiles-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+      .map-tiles {
+          filter:var(--map-tiles-filter, none);
+     }
+  }
+  #salir{
+     color: black;
+     position: absolute;
+     right: 25px;
+  }
+    
+  #informativa2{
+    display:flex;
+    
+  }
+  /*Menu hamburguesa*/
+  *{
+     font-family: Arial;
+   }
    
- 
- }
- 
- 
- li {
-   display: block;
-   background: #ffd203;
-   margin: 0;
-   padding: 10px;
-   list-style: none;
-   border-bottom: 1px solid grey;
- }
- 
- /*Estilo cuando el mouse pasa encima de cada link del menu*/
- li:hover {
-   filter: brightness(110%);
- }
- #menuHamburguesa{
-   position: absolute;
-   z-index: 3000;
-   left: 8px;
-   top: 90px;
-   height: 40px;
-   width: 40px;
+   ul{
+     display: none;
+   }
    
- }
- #menu{
-   display:none;
- }
- #muestracontratos{
-   width: 200px;
-   height: 95%;
-   background-color: white;
-   position: absolute;
-   right: 20px;
-   top: 20px;
-   overflow-y: scroll;
-   border: 2px solid black;
- }
- #formulario{
-   width: 250px;
-    height: 250px;
-    border: 2px solid black;
-    position: relative;
-    left: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-}
- h3{
-   text-align: center;
-   font-family: 'Times New Roman', Times, serif;
-}
- 
- #container{
+   input:checked  ~ ul{
+     display:block;
+   }
    
-   width: 100%;
-   height: 100%;
-   background-color:#ffd203;
    
-
- }
- #botones{
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column-reverse;
-   align-content: stretch;
-   justify-content: space-evenly;
-   align-items: stretch;
- }
- #entradaTexto{
-   width: 100%;
-   height: auto;
- }
+   
+   label {
+     box-sizing: border-box;
+     display: inline-block;
+     border: 1px solid black;
+     border-radius: 5px;
+     width: 30px;
+     height: 30px;
+     line-height: 30px;
+     font-weight: bold;
+     text-align: center;
+     user-select: none;
+   }
+   
+   /* Estilo del boton cuando se pasa el mouse por encima*/
+   label:hover{
+     background: grey;
+   }
+   
+   /* Estilo del boton cuando el menÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âº estÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ expandido*/
+   input:checked ~ label {
+     background: grey; 
+   }
+   
+   ul{
+     margin-top:0;
+     padding: 0;
+     width: 200px;
+     
+   
+   }
+   
+   
+   li {
+     display: block;    
+     margin: 0;
+     padding: 10px;
+     list-style: none;
+     border: 2px solid grey;
+     background-color:whitesmoke;
+   }
+   
+   /*Estilo cuando el mouse pasa encima de cada link del menu*/
+   li:hover {
+     filter: brightness(110%);
+   }
+   #menuHamburguesa{
+     position: absolute;
+     z-index: 3000;
+     left: 8px;
+     top: 90px;
+     height: 40px;
+     width: 40px;
+     
+   }
+   #menu{
+     display:none;
+   }
+   #muestracontratos{
+     width: 200px;
+     height: 90%;
+     background-color:  #e7effd;
+     position: absolute;
+     right: 20px;
+     top: 35px;
+     overflow-y: scroll;
+     border: 2px solid black;
+     border-radius: 5px;
+     -webkit-box-shadow: 0 10px 30px 0 rgb(95 186 233 / 40%);
+   }
+   #formulario{
+     width: 250px;
+     height: 250px;
+     border: 2px solid black;
+     position: relative;
+     left: 20px;
+     display: flex;
+     flex-wrap: nowrap;
+     align-content: stretch;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column-reverse;
+     background-color: #0000009e;
+     border-radius: 5px;
+     -webkit-box-shadow: 0 10px 30px 0 rgb(95 186 233 / 40%);
+  }
+   h3{
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     background-color: #fed103;
+  }
+   
+   #container{
+     
+     width: 100%;
+     height: 100%;
+     background-color:#3a3c3f;
+     
+  
+   }
+   #botones{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column-reverse;
+     align-content: stretch;
+     justify-content: space-evenly;
+     align-items: stretch;
+   }
+   #entradaTexto{
+     width: 100%;
+     height: auto;
+   }
+   .botonSubmit{
+    background-color: #fed103;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 30px 0 rgb(95 186 233 / 40%);
+   }
