@@ -8,11 +8,11 @@ class settings{
 
 const  latLongitudInicial='-33.45127917470724, -70.67639411303647';// buscar un punto del pais desde google maps
 const  autoClose='false';
-const  serverIP='UNA IP';
-const  portdb='UN PUERTO';
-const  userdb='UN USER';
-const  passdb='UNA PASSWORD';
-const  database='NOMBRE DE LA BASE DE DATOS';
+const  serverIP='0.0.0.0';
+const  portdb='1433';
+const  userdb='sa';
+const  passdb='000000';
+const  database='monitordb';
 const  ficheroRealtime='C:\xampp\Queries\AlarmasBuffer_CHILETEST.sql';
 const  ficheroHistorico='C:\xampp\Queries\utimasNhs_CHILE.sql';//incidentesDia.sql';
 const  tiempoConsultaficheroRealtime=(120); // segundos que se refrescará el json que lee el mapa
@@ -28,7 +28,7 @@ const  ficheroCacheRealTime='C:\xampp\ArchivosJson_CH\RMTEST\eventosRealTime.jso
 const  labelFicheroCacheRealTime='TIEMPO REAL'; //etiqueta
 const  repeticiones=3;//luego de cuantas repeticiones se pinta de rojo el circulo de alarma
 const  iconoAlarma='police-siren-siren2.gif';//Icono de alarma en tiempo real
-const  mapaAjustarApuntos=false;// acomoda el mapa automáticamente para que se ajuste a las alarmas realtime y se vea lo mas cerca posible
+const  mapaAjustarApuntos=true;// acomoda el mapa automáticamente para que se ajuste a las alarmas realtime y se vea lo mas cerca posible
 const  username='alarmas';// para el login inicial
 const  password='dtialarmas'; //para el login inicial
 

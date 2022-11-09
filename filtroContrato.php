@@ -1,3 +1,7 @@
+<?php
+require_once "validaUsuario.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,8 +16,7 @@
 
 <body>
     <?php
-    session_set_cookie_params(60 * 60 * 24 * 14); //haciendo que la sesion dure 14 dias
-    session_start();
+  
     if (!isset($_SESSION['contratos'])) {
         $_SESSION['contratos'] = array();
     }
@@ -42,9 +45,9 @@
                 </div>
                 <br>
                 <div id="botones">
-                    <input type="submit" name="enviar" value="Agregar">
+                    <input type="submit" class="botonSubmit" name="enviar" value="Agregar">
                     <br>
-                    <input type="submit" name="vaciar" value="Vaciar">
+                    <input type="submit" class="botonSubmit" name="vaciar" value="Vaciar">
                 </div>
                 <br><br>
                 <a href="index.php">Volver al Mapa</a>
